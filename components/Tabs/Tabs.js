@@ -41,7 +41,7 @@ class TabLink {
       card.style.backgroundColor = "none";
     });
     // Add a class of ".active-tab" to this.tabElement
-    this.tabElement = this.tabElement.setAttribute("class", ".active-tab");
+    this.tabElement = this.tabElement.classList.add("active-tab");
     // Notice we are looping through the this.cards array and invoking selectCard() from the TabCard class. Just un-comment the code and study what is happening here.
     this.cards.forEach(card => card.selectCard());
   }
