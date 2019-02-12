@@ -1,4 +1,4 @@
-class Carousel {
+// class Carousel {
   constructor(carousel) {
     this.carousel = carousel;
     this.left = carousel.querySelector(".left-button");
@@ -38,9 +38,9 @@ class Carousel {
       }
     });
   }
-}
+// }
 
-let carousel = document.querySelector();
+let carousel = document.querySelectorAll(".carousel").forEach(carousel => new Carousel(carousel));
 
 /* If You've gotten this far, you're on your own! Although we will give you some hints:
     1. You will need to grab a reference to the carousel, and in it grab the laft and right buttons
