@@ -1,5 +1,43 @@
 class Carousel {
+  constructor(carousel) {
+    this.carousel = carousel;
+    this.left = carousel.querySelector(".left-button");
+    this.right = carousel.querySelector(".right-button");
+    this.images = carousel.querySelectorAll("img");
+    this.currentIndex = 0;
 
+    this.images.forEach((img, curr) => {
+      if (current === this.currentIndex) {
+        img.style.display = "flex";
+      } else {
+        img.style.display = "none";
+      }
+    });
+    this.left.addEventListener("click", () =>
+      this.displayImage((this.currentIndex = this.currentIndex - 1))
+    );
+    this.right.addEventListener("click", () =>
+      this.displayImage((this.currentIndex = this.currentIndex + 1))
+    );
+  }
+
+  displayImage() {
+    if (this.currentIndex < 0) {
+      this.currentIndex = this.images.length - 1;
+    }
+
+    if (this.currentIndex > this.images.length - 1) {
+      this.currentIndex = 0;
+    }
+
+    this.images.forEach((img, curr) => {
+      if (current === this.currentIndex) {
+        img.style.display = "flex";
+      } else {
+        img.style.display = "none";
+      }
+    });
+  }
 }
 
 let carousel = document.querySelector();
